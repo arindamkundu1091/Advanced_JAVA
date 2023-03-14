@@ -1,0 +1,15 @@
+package org.study.cars;
+
+import org.springframework.stereotype.Component;
+import org.study.intefaces.Car;
+
+@Component("mycorola")
+public class Corola implements Car {
+
+	
+	public String getCar() {
+		
+		return "Sedan from Toyota";
+	}
+
+}

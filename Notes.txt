@@ -1,0 +1,8 @@
+Features of JAVA:-
+    1. Platform independent
+    2. Portable
+    3. Secure
+    4. Object Oriented
+
+JSP=JAVA Server Page
+JSTL=JAVA Server Tag Language, EL, JAVA BEAN & MVC JDBC

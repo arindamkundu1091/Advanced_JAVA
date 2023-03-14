@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Welcome to Login App by Cookie</h1>  
+<h2>
+<a href="Login.html">Login</a>|  
+<a href="Logout">Logout</a>|  
+<a href="Profile">Profile</a> 
+</h2>
+</body>
+</html>

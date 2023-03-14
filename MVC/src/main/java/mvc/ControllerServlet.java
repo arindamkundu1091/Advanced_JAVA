@@ -1,0 +1,38 @@
+package mvc;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import bean.Login;
+
+
+@WebServlet("/ControllerServlet")
+public class ControllerServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		String email = request.getParameter("uemail");
+		String pass = request.getParameter("upass");
+		Login bean = new Login();
+		bean.setEmail(email);
+		bean.setPassword(pass);
+		request.setAttribute("bean", bean);
+		boolean status = bean.validate();
+		
+		if(status) {
+			RequestDispatcher rd = request.getRequestDispatcher("login_sucess.jsp");
+			  rd.forward(request, response);  
+		} else {  
+            RequestDispatcher rd=request.getRequestDispatcher("login_error.jsp");  
+            rd.forward(request, response);  
+        }
+	}
+}

@@ -1,0 +1,13 @@
+package org.study.cars;
+
+import org.study.intefaces.Car;
+
+public class Corola implements Car {
+
+	
+	public String getCar() {
+		
+		return "Sedan from Toyota";
+	}
+
+}
